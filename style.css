@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+:root {
+  --veryDarkBlue: hsl(216, 12%, 8%);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --darkBlue: hsl(213, 19%, 18%);
+  --orange: hsl(25, 97%, 53%);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+}
+
+html {
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: #121417;
+  height: 100vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 100%;
+  -ms-grid-columns: 100%;
+      grid-template: 100% / 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+main p {
+  color: #959eac;
+}
+
+main .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: auto;
+  width: 90%;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  background-color: #1d232a;
+}
+
+@media (min-width: 450px) {
+  main .card {
+    width: auto;
+    max-width: 450px;
+    padding: 3rem;
+  }
+}
+
+main .card .rating-state {
+  display: contents;
+}
+
+main .card .rating-state .star-icon {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #252d37;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+main .card .rating-state .rating-header {
+  margin-bottom: 0;
+}
+
+main .card .rating-state .rating-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+main .card .rating-state .rating-container .rating-button {
+  margin: 1rem 0;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #252d37;
+  color: #959eac;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+@media (min-width: 320px) {
+  main .card .rating-state .rating-container .rating-button {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+@media (min-width: 600px) {
+  main .card .rating-state .rating-container .rating-button {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+main .card .rating-state .rating-container .rating-button:hover {
+  background-color: #fb7413;
+  color: white;
+}
+
+main .card .rating-state .submit-button {
+  width: 100%;
+  background-color: #fb7413;
+  color: white;
+  border: none;
+  border-radius: 18px;
+  padding: 0.8rem 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+main .card .rating-state .submit-button:hover {
+  background-color: white;
+  color: #fb7413;
+}
+
+main .card .thank-you-state {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .card .thank-you-state .rating-number {
+  margin-top: 2rem;
+  color: #fb7413;
+  background-color: #252d37;
+  padding: 0.5rem 1rem;
+  border-radius: 18px;
+  font-size: 0.9rem;
+}
+
+main .card .thank-you-state .thank-you-header {
+  margin-bottom: 0;
+}
+
+main .card .thank-you-state .thank-you-paragraph {
+  text-align: center;
+  width: 95%;
+}
+/*# sourceMappingURL=style.css.map */

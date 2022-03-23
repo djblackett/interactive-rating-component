@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+
+:root {
+  --veryDarkBlue: hsl(216, 12%, 8%);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --darkBlue: hsl(213, 19%, 18%);
+  --orange: hsl(25, 97%, 53%);
+}
+
+* {
+  box-sizing: border-box;
+  color: white;
+}
+
+html {
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+$veryDarkBlue: hsl(216, 12%, 8%);
+$mediumGrey: hsl(216, 12%, 54%);
+$lightGrey: hsl(217, 12%, 63%);
+$darkBlue: hsl(213, 19%, 18%);
+$orange: hsl(25, 97%, 53%);
+$mediumDarkBlue: hsl(214, 19%, 14%);
+
+main {
+  background-color: $veryDarkBlue;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template: 100% / 100%;
+  align-items: center;
+  justify-items: center;
+
+  p {
+    color: $lightGrey;
+  }
+
+  .card {
+    display: flex;
+    // grid-template: repeat(5, 200px) / 1fr;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: auto;
+    width: 90%;
+    // align-items: center;
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    // border: 3px solid red;
+    background-color: $mediumDarkBlue;
+
+    @media (min-width: 450px) {
+      width: auto;
+      max-width: 450px;
+      padding: 3rem;
+    }
+
+    .rating-state {
+      display: contents;
+      .star-icon {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: none;
+        background-color: $darkBlue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .rating-header {
+        margin-bottom: 0;
+      }
+
+      .rating-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 1rem;
+
+        .rating-button {
+          margin: 1rem 0;
+          height: 2.5rem;
+          width: 2.5rem;
+          border-radius: 50%;
+          border: none;
+          background-color: $darkBlue;
+          color: $lightGrey;
+          transition: all 0.4s;
+          cursor: pointer;
+
+          @media (min-width: 320px) {
+            height: 3rem;
+            width: 3rem;
+          }
+
+          @media (min-width: 600px) {
+            height: 4rem;
+            width: 4rem;
+          }
+
+          &:hover {
+            background-color: $orange;
+            color: white;
+          }
+        }
+      }
+      .submit-button {
+        width: 100%;
+        background-color: $orange;
+        color: white;
+        border: none;
+        border-radius: 18px;
+        padding: 0.8rem 0.5rem;
+        font-weight: 700;
+        letter-spacing: 0.2rem;
+        transition: all 0.4s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: white;
+          color: $orange;
+        }
+      }
+    }
+
+    .thank-you-state {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+
+      .rating-number {
+        margin-top: 2rem;
+        color: $orange;
+        background-color: $darkBlue;
+        padding: 0.5rem 1rem;
+        border-radius: 18px;
+        font-size: 0.9rem;
+      }
+
+      .thank-you-header {
+        margin-bottom: 0;
+      }
+
+      .thank-you-paragraph {
+        text-align: center;
+        width: 95%;
+      }
+    }
+  }
+}
